@@ -4,8 +4,9 @@ This repository contains a custom ROS package, `my_rosbot_2r_pkg`, designed to e
 Using the `find_object_2d` package, the robot detects the object, processes its position relative to the robot through homography and perspective transformation, and adjusts the robot's movement accordingly. It also integrates OpenCV for visual feedback, drawing bounding boxes and centroids on the detected object. The robot’s distance to the object is monitored using either Lidar or TOF sensors, and the node continuously publishes velocity commands to keep the robot aligned and at the correct distance from the object.
 
 ### Demo Video
-You can watch the demo video by clicking on the below image
+You can watch the demo video of object tracking by clicking on the below image
 [![Watch the video](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/4.png)](https://www.youtube.com/watch?v=KF7SK3x3tR0)
+You can watch the demo video of object detection by clicking on the below image
 [![Watch the video](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/4.png)](https://youtu.be/ihLOgAEz3rU)
 
 ## Gazebo World
