@@ -73,7 +73,9 @@ sudo apt-get install git
 ```bash
 git clone https://github.com/EhtishamAshraf/rosbot_object_tracking_ws.git
 ```
-
+```bash
+cd rosbot_object_tracking_ws
+```
 Run the below commands in root folder of the workspace
 ```bash
 catkin_make 
