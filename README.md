@@ -21,7 +21,7 @@ First, open a new terminal and install the find_object_2d package. Replace $ROS_
 ```bash
 sudo apt-get install ros-$ROS_DISTRO-find-object-2d
 ```
-Next, to store the data of objects for later recognition by the Rosbot, run the following launch file:
+Next, to store the data of objects for later recognition by the Rosbot, run the following launch file, perform this action, after cloing the repository!
 ```bash
 roslaunch object_teaching.launch teach:=true
 ```
