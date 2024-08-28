@@ -28,13 +28,13 @@ roslaunch object_teaching.launch teach:=true
 A GUI will open with the Gazebo Simulation environment. Use the keyboard to control the robot (via the teleop twist keyboard node) and align it perfectly with the object you wish to detect.
 
 To begin the teaching process, select Edit → Add object from scene... from the main toolbar. A new window will appear. Move the robot with the camera to capture as many features of the object as possible. Avoid capturing the surroundings. When ready, click Take picture.
-![Wall Following](https://github.com/EhtishamAshraf/Turtlebot3_line_wall_following/blob/main/src/follower_robot_pkg/Images/1.png)
+![Wall Following](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/1.png)
 
 In the next view, click Select region and choose only the part of the picture that covers the desired object, then click Next and then click End. Check the ID of the objects from the left windown.
-![Wall Following](https://github.com/EhtishamAshraf/Turtlebot3_line_wall_following/blob/main/src/follower_robot_pkg/Images/2.png)
+![Wall Following](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/2.png)
 
 Once you’ve added enough objects to the database, stop the camera by selecting Edit → Stop camera, then choose File → Save objects... from the main toolbar. Save the data inside the package in a separate folder.
-![Wall Following](https://github.com/EhtishamAshraf/Turtlebot3_line_wall_following/blob/main/src/follower_robot_pkg/Images/3.png)
+![Wall Following](https://github.com/EhtishamAshraf/rosbot_object_following_ws/blob/main/src/Images/3.png)
 
 ## Object Tracking Logic
 - The robot continuously rotates counterclockwise in the environment until it detects the desired object. Once found, it checks the distance to 
@@ -43,7 +43,7 @@ Once you’ve added enough objects to the database, stop the camera by selecting
   robot rotates to correct its orientation.
 - Robot uses both Lidar and RangeFinders to maintain a fixed distance from the object.  
 
-## Run the SImulation
+## Run the Simulation
 Run the object_following.launch file to initiate object tracking. In this simulation, the robot will rotate to detect and track a stop sign, maintaining a fixed distance from the object.
 In order to launch the launch file (you should first navigate inside the launch folder of the package and then, use the following command): 
 ```bash
@@ -70,7 +70,7 @@ sudo apt-get update
 sudo apt-get install git
 ```
 ```bash
-git clone https://github.com/EhtishamAshraf/rosbot_object_following_ws.git
+git clone https://github.com/EhtishamAshraf/rosbot_object_tracking_ws.git
 ```
 
 Run the below commands in root folder of the workspace
