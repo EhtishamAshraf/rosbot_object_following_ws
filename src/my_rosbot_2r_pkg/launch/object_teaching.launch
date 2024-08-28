@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<launch>
+
+<!-- 
+If the "teach" argument is true, the robot will use its camera to save images of objects 
+for later recognition. This allows the robot to learn about the objects it needs to detect.
+
+If the "teach" argument is false, the robot will perform object detection in the environment 
+using the previously saved images to identify objects.
+-->
+
+    <arg name="use_gazebo" default="true" />
+    <arg name="teach" default="false"/>
+
+    <!-- Gazebo -->
+    <group if="$(arg use_gazebo)">
+        <param name="use_sim_time" value="true" />
+        <include file="$(find rosbot_bringup)/launch/rosbot_tutorial.launch">
+            <arg if="$(arg teach)" name="world" value="image_teaching"/> 
+            <arg unless="$(arg teach)" name="world" value="image_recognition"/>
+        </include>
+    </group>
+
+    <!-- Teleoperation - keyboard control -->
+    <node name="teleop_twist_keyboard" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen"/>
+
+    <!-- Object detection -->
+    <node pkg="find_object_2d" type="find_object_2d" name="find_object_2d">
+        <remap from="image" to="/camera/color/image_raw"/>
+        <param name="gui" value="$(arg teach)"/>
+        <param unless="$(arg teach)" name="objects_path" value="$(find my_rosbot_2r_pkg)/img_data/"/>
+    </node>
+
+</launch>

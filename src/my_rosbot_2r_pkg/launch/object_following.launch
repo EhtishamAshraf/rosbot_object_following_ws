@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- use LiDAR or TOF Sensor -->
+    <arg name="use_lidar" default="false"/> 
+
+    <!-- Set parameter to true to use Lidar and Set to False to use TOF Sensor -->
+    <param name="lidarParam" type="bool" value="$(arg use_lidar)"/>
+
+    <!-- Include the common launch file -->
+    <include file="$(find my_rosbot_2r_pkg)/launch/object_teaching.launch"/>
+
+    <!-- Object following Node -->
+    <!-- <node pkg="my_rosbot_2r_pkg" type="object_following_node" name="object_following_node" output="screen"/> -->
+
+    <!-- Image capture and visualize Node -->
+    <!-- <node pkg="my_rosbot_2r_pkg" type="capture_and_visualize" name="capture_and_visualize" output="screen"/> -->
+
+    <!-- Object following and visualization Node -->
+    <!-- <node pkg="my_rosbot_2r_pkg" type="object_following_and_visualization_node" name="object_following_and_visualization_node" output="screen"/> -->
+
+    <!-- Object following with distance maintenance Node -->
+    <node pkg="my_rosbot_2r_pkg" type="distance_based_object_tracking_node" name="distance_based_object_tracking_node" output="screen"/>
+
+    <!-- rviz -->
+    <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find my_rosbot_2r_pkg)/rviz/rosbot_object_recognition.rviz" output="screen"/> -->
+
+</launch>

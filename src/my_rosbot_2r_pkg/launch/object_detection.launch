@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+
+    <!-- Include the common launch file -->
+    <include file="$(find my_rosbot_2r_pkg)/launch/object_teaching.launch"/>
+
+    <!-- Camera view node -->
+    <node pkg="image_view" type="image_view" name="image_view" output="screen">
+        <remap from="image" to="/camera/color/image_raw"/>
+    </node>
+
+    <!-- Object detection Node -->
+    <node pkg="my_rosbot_2r_pkg" type="object_detection_node" name="object_detection_node" output="screen"/>
+    
+    <!-- rviz -->
+    <!-- <node pkg="rviz" type="rviz" name="rviz" args="-d $(find my_rosbot_2r_pkg)/rviz/rosbot_object_recognition.rviz" output="screen"/> -->
+
+</launch>
