@@ -76,11 +76,10 @@ git clone https://github.com/EhtishamAshraf/rosbot_object_tracking_ws.git
 ```bash
 cd rosbot_object_tracking_ws/src
 ```
-Before running the simulation, please follow the instructions on this page to install rosbot in your workspace.
+Before running the simulation, please clone the rosbot repository inside the src folder of the ws.
 ```bash
-https://github.com/husarion/rosbot_ros/tree/noetic
+git clone https://github.com/husarion/rosbot_ros.git -b noetic
 ```
-
 Run the below commands in root folder of the workspace
 ```bash
 catkin_make 
