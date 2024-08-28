@@ -1,4 +1,4 @@
-# rosbot_object_following_ws
+# Object Tracking and Detection using ROS
 This repository contains a custom ROS package, `my_rosbot_2r_pkg`, designed to empower the Rosbot 2R with autonomous object detection and tracking capabilities. The package enables the robot to detect a specified object, move towards it, and maintain a fixed distance while keeping the object centered in its field of view. Through this functionality, the Rosbot can efficiently follow the object, ensuring consistent alignment and proximity, making it ideal for various robotics applications that require precise object interaction and tracking.
 
 Using the `find_object_2d` package, the robot detects the object, processes its position relative to the robot through homography and perspective transformation, and adjusts the robot's movement accordingly. It also integrates OpenCV for visual feedback, drawing bounding boxes and centroids on the detected object. The robot’s distance to the object is monitored using either Lidar or TOF sensors, and the node continuously publishes velocity commands to keep the robot aligned and at the correct distance from the object.
