@@ -80,6 +80,9 @@ Before running the simulation, please clone the rosbot repository inside the src
 ```bash
 git clone https://github.com/husarion/rosbot_ros.git -b noetic
 ```
+```bash
+cd ..
+```
 Run the below commands in root folder of the workspace
 ```bash
 catkin_make 
@@ -88,7 +91,11 @@ catkin_make
 source devel/setup.bash 
 ```
 
-Press Enter and navigate to the launch folder inside the package
+Press Enter and run the following command
 ```bash
-roslaunch object_following.launch
+roslaunch my_rosbot_2r_pkg object_following.launch use_lidar:=true
+```
+or
+```bash
+roslaunch my_rosbot_2r_pkg object_following.launch
 ```
