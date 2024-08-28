@@ -74,8 +74,13 @@ sudo apt-get install git
 git clone https://github.com/EhtishamAshraf/rosbot_object_tracking_ws.git
 ```
 ```bash
-cd rosbot_object_tracking_ws
+cd rosbot_object_tracking_ws/src
 ```
+Before running the simulation, please follow the instructions on this page to install rosbot in your workspace.
+```bash
+https://github.com/husarion/rosbot_ros/tree/noetic
+```
+
 Run the below commands in root folder of the workspace
 ```bash
 catkin_make 
